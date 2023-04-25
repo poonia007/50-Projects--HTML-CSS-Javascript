@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&family=Tilt+Neon&display=swap");
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background-color:blueviolet;
+    align-items: center;   /* to align center in horizontal direction*/
+    height: 100vh;       /* to specify full screen height*/
+    justify-content: center;  /* to align center in vertical direction*/
+    overflow: hidden;
+    margin: 0;
+    width: 100vw;
+}
+.container{
+      position: relative;
+      height: 50px;
+}
+.search-input{
+    border: none;
+    position:absolute;
+    border-radius: 5px;
+    padding: 2px 5px;
+    height: 50px;
+    width: 50px;
+    transition: width 0.5s ease;
+    outline: none;
+}
+
+.search-btn{
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    transition: transform 0.5s ease;
+    outline: none;
+}
+.container.active .search-input{
+    width: 200px;
+}
+.container.active .search-btn{
+    transform: translateX(190px);
+}
