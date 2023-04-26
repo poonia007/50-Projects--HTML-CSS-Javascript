@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu");
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    font-family: Ubuntu;
+    align-items: center;   /* to align center in horizontal direction*/
+    height: 100vh;       /* to specify full screen height*/
+    width: 100vw;
+    justify-content: center;  /* to align center in vertical direction*/
+    overflow: hidden;
+    margin: 0;
+    background-color: aquamarine;
+}
+.container{
+    position: relative;
+    height: 300px;
+    width: 400px;
+}
+.bg{
+    background: url('https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8dHJhY3RvcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60')
+    no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    z-index: -1;
+    filter: blur(0px);
+    border-radius: 10px;
+}
+.loading-text{
+    position: absolute;
+    left: 40%;
+    top:40%;
+    font-size: 50px;
+    color: #fff;
+}
