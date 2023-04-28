@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&family=Tilt+Neon&display=swap");
+*{
+    box-sizing: border-box;
+}
+body{
+     align-items: center;   /* to align center in horizontal direction*/
+    height: 100vh;       /* to specify full screen height*/
+    overflow: hidden;
+    margin: 0;
+}
+h1{
+    font-size: 4rem;
+    color: #fff;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    color:#fff;
+    border: #fff solid 0.2rem ;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 15rem;
+    padding: 1.5rem;
+
+}
+.split.left .btn:hover{
+    background-color:rgba(80,80,200);
+    border-color: rgba(80,80,200);
+}
+.split.right .btn:hover{
+    background-color: rgba(40,40,40,1);
+    border-color: rgba(40,40,40,1);
+}
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+}
+.split{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.split.left{
+    left:0;
+    background: url('https://cdn.mos.cms.futurecdn.net/HkdMToxijoHfz4JwUgfh3G.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+   
+}
+.split.left::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(80,80,200,0.7);
+}
+.split.right{
+    right: 0;
+    background: url('https://media.wired.com/photos/5fa5dc3dba670daaf8e97a8d/master/w_2560%2Cc_limit/games_gear_series-x.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.split.right::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(40,40,40,0.7);
+}
+.left-hover .left{
+      width: 70%;
+}
+.left-hover .right{
+    width: 30%;
+}
+.right-hover .right{
+    width: 70%;
+}
+.right-hover .left{
+    width: 30%;
+}
+.split.left , .split.right , .split.left::before ,.split.right::before {
+    transition: width 0.4s ease;
+}
+@media (max-width:800px) {
+    h1{
+        font-size: 2rem;
+    }
+    .btn{
+        width: 12rem;
+        padding: 1.2rem;
+    }
+}
